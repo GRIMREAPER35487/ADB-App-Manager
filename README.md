@@ -22,5 +22,9 @@ Select an option and thats it :)
 - Android SDK | [Download](https://developer.android.com/studio)
 - Python 3.10+ | [Download](https://www.python.org/downloads/)
 
+## Whats Next?
+- Make a Rust version to enable the tool to be used without the need for Python
+- Make a GUI version to make the tool more user friendly
+
 ## License
 This tool is licensed under GNU General Public License v3.0.
