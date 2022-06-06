@@ -3,7 +3,7 @@ import os
 from re import A
 
 # OTU Variables
-app_ver = str("0.1.0")
+app_ver = str("0.1.1")
 
 # Define Functions
 
