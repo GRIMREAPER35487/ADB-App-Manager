@@ -4,7 +4,7 @@
 ADB-App-Manager is a tool to manage your Android applications. The goal of this tool is to make useing adb to manage your applications easier.
 
 ## How to use it?
-Before you can use this tool you have to install the Android SDK, and conect your device to your PC. (Check the [Requried Software](##Required-Software) section)
+Before you can use this tool you have to install the Android SDK, and conect your device to your PC. (Check the Requried Software section)
 
 When you run the tool, you will be asked to enter the path to your Android SDK or the folder that "adb.exe" resides in. This will create a file that will automatically be used by the tool to complete this step on future runs.
 
