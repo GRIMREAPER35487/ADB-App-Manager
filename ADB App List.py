@@ -168,7 +168,7 @@ def Run_Action(dir, action, package):
 def Select_Search():
     while True:
         # Ask user if they want to search for a package or input a package number
-        search = input("\nPlease Select Search Method: 1=Search, 2=Input, 3=Quit: ")
+        search = input("\nPlease Select an Option: 1=Search, 2=Input, 3=Quit: ")
         if search in [ '1', 'Search', 'search', 'SEARCH', 'S', 's' ]:
             return "search"
         if search in [ '2', 'Input', 'input', 'INPUT', 'I', 'i' ]:
@@ -207,14 +207,11 @@ Print_Packages(output)
 while True:
     search = Select_Search()
     if search == "search":
-        print("Debug: Search")
         Search_Package(output)
     if search == "input":
-        print("Debug: Input")
         package = Select_Package(output)
         action = Select_Action(package)
         Run_Action(dir, action, package)
     if search == "quit":
-        print("Debug: Quit")
         break
 print("Exting Program")
