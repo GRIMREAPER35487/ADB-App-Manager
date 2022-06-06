@@ -3,7 +3,7 @@ import os
 from re import A
 
 # OTU Variables
-app_ver = str("0.1.1")
+app_ver = str("0.1.2")
 
 # Define Functions
 
@@ -33,7 +33,6 @@ def Install_Dir():
             file.write(dir)
         return dir
 
-
 # Check if string ends in a \
 # If not, add a \ to the end of the string
 def Check_Slash(dir):
@@ -61,12 +60,6 @@ def Check_Dir(dir):
                 print("Directory Exists")
                 break
         return dir
-
-# Run Program
-# Print output of program
-def Run_Program(dir):
-    print("DEBUG: Output of ADB.exe")
-    os.system(dir + "adb.exe")
 
 # Check if device is connected to PC through ADB
 # If not, wait for user input to check again
@@ -195,7 +188,7 @@ def Search_Package(output):
             break
 
 # Main
-print(f"ADB App Uninstaller\nVersion {app_ver}\nGRIMREAPER35487\n")
+print(f"ADB App Mannager\nVersion {app_ver}\nGRIMREAPER35487\n")
 dir = Install_Dir()
 dir = Check_Dir(dir)
 dir = Check_Slash(dir)
