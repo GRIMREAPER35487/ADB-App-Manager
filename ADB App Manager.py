@@ -193,7 +193,6 @@ dir = Install_Dir()
 dir = Check_Dir(dir)
 dir = Check_Slash(dir)
 print(f"\nSetting ADB Directory to {dir}")
-#Run_Program(dir) | Only Usefull to test if you can run ADB.exe in this context. Otherwise leave commented out..
 Check_Device(dir)
 output = Scan_Packages(dir)
 Print_Packages(output)
