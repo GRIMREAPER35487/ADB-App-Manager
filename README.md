@@ -23,6 +23,7 @@ Select an option and thats it :)
 - Python 3.10+ | [Download](https://www.python.org/downloads/)
 
 ## Whats Next?
+- Add abbility to select a package using the packages name instead of only the index number
 - Make a Rust version to enable the tool to be used without the need for Python
 - Make a GUI version to make the tool more user friendly
 
