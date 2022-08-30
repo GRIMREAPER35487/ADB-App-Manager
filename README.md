@@ -24,6 +24,7 @@ Select an option and thats it :)
 
 ## Whats Next?
 - Add ability to select a package using the packages name instead of only the index number
+- Shizuku support for on Android applications
 - Make a Rust version to enable the tool to be used without the need for Python
 - Make a GUI version to make the tool more user friendly
 
