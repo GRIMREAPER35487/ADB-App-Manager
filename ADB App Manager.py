@@ -60,6 +60,7 @@ def Check_Dir(dir):
                 print("Directory Exists")
                 with open("Install_Dir.txt", "w") as file:
                     file.write(dir)
+                    print("Wrote new Directory")
                 break
         return dir
 
