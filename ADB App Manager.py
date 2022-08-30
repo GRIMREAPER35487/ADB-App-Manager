@@ -58,6 +58,8 @@ def Check_Dir(dir):
             dir = input("Directory Does Not Exist. Please Enter the Directory That ADB.exe is in: ")
             if os.path.exists(dir):
                 print("Directory Exists")
+                with open("Install_Dir.txt", "w") as file:
+                    file.write(dir)
                 break
         return dir
 
@@ -134,13 +136,15 @@ def Select_Package(packages):
 def Select_Action(package):
     while True:
         # Ask user if they want to uninstall, disable, or enable package
-        action = input("\nPlease Select Action: 1=Uninstall, 2=Disable, 3=Enable: ")
+        action = input("\nPlease Select Action: 1=Uninstall, 2=Disable, 3=Enable, 4=Abort: ")
         if action in [ '1', 'Uninstall', 'uninstall', 'UNINSTALL', 'U', 'u' ]:
             return "uninstall"
         if action in [ '2', 'Disable', 'disable', 'DISABLE', 'D', 'd' ]:
             return "disable"
         if action in [ '3', 'Enable', 'enable', 'ENABLE', 'E', 'e' ]:
             return "enable"
+        if action in [ '4', 'Abort', 'abort', 'ABORT', 'A', 'a']:
+            return "abort"
 
 # Use the action varaible to call the correct ADB command
 # If action is uninstall, call uninstall command
@@ -149,10 +153,16 @@ def Select_Action(package):
 def Run_Action(dir, action, package):
     if action == "uninstall":
         os.system(dir + "adb.exe uninstall " + package)
+        return
     if action == "disable":
         os.system(dir + "adb.exe shell pm disable " + package)
+        return
     if action == "enable":
         os.system(dir + "adb.exe shell pm enable " + package)
+        return
+    if action == "abort":
+        print('Aborted')
+        return
 
 # Ask if user wants to search for a package or input a package number
 # If user selects search, return search
@@ -202,6 +212,7 @@ while True:
         Search_Package(output)
     if search == "input":
         package = Select_Package(output)
+        print(f'\n---------\nSelected:{package}\n---------')
         action = Select_Action(package)
         Run_Action(dir, action, package)
     if search == "quit":
